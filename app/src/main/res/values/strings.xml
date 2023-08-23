@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Lokal</string>
+    <string name="welcomeString">Welcome</string>
+    <string name="welcomeButtonString">To get started click on the button</string>
+    <string name="textview">TextView</string>
+    <string name="apiempty">List is Empty</string>
+    <string name="apinonempty">List is not Empty</string>
+    <string name="getstarted">Get Started</string>
 </resources>
