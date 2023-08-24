@@ -10,6 +10,6 @@ const val product = "products"
 //const val API_KEY = ""
 interface ApiProductInterface
 {
-    @GET(product)
-    fun getProducts() : Call<Products>
+    @GET(product) // Sending Query to get product list
+    fun getProducts() : Call<Products> // Calling Data Class
 }

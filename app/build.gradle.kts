@@ -35,6 +35,7 @@ android {
     }
     buildFeatures {
         compose = true
+        viewBinding = true
     }
     composeOptions {
         kotlinCompilerExtensionVersion = "1.4.3"
@@ -63,6 +64,7 @@ dependencies {
     implementation("com.squareup.retrofit2:converter-scalars:2.1.0")
     implementation("androidx.recyclerview:recyclerview:1.3.1")
     implementation ("com.github.bumptech.glide:glide:4.14.2")
+    implementation("androidx.cardview:cardview:1.0.0")
     annotationProcessor ("com.github.bumptech.glide:compiler:4.14.2")
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")

@@ -13,7 +13,7 @@ object ProductsRetroFit
     {
         //val gson = GsonBuilder().setLenient().create()
         //val retrofit = Retrofit.Builder().baseUrl(BASE_URL).addConverterFactory(ScalarsConverterFactory.create()).addConverterFactory(GsonConverterFactory.create(gson)).build()
-        val retrofit = Retrofit.Builder().baseUrl(BASE_URL).addConverterFactory(GsonConverterFactory.create()).build()
+        val retrofit = Retrofit.Builder().baseUrl(BASE_URL).addConverterFactory(GsonConverterFactory.create()).build()  // Converting JSON to GSON
         apiInterface = retrofit.create(ApiProductInterface::class.java)
     }
 }

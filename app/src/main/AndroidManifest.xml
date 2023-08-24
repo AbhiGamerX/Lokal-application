@@ -35,6 +35,16 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".ProductDetailsActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="lokal.internal.ProductDetailsActivity"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+
+        </activity>
+
     </application>
 
 </manifest>

@@ -1,10 +1,9 @@
 package project.assignment.lokal
 
-data class Products(val products: List<ProductList>)
+import android.os.Parcel
+import android.os.Parcelable
+data class Products(val products: List<ProductList>):java.io.Serializable
 {
 
 }
-/*data class Products(val title: String, val description: String, val price: Int, val discountPercentage: Double, val rating: Double, val thumbnail: String, val images: List<ProductImages>)
-{
 
-}*/
