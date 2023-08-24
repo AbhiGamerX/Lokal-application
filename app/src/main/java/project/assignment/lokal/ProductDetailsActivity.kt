@@ -2,18 +2,10 @@ package project.assignment.lokal
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
-import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
 
 class ProductDetailsActivity : AppCompatActivity()
 {
@@ -38,5 +30,23 @@ class ProductDetailsActivity : AppCompatActivity()
         prodRating = findViewById(R.id.productRating)
         prodDisc = findViewById(R.id.productDiscount)
 
+        val bundle = intent.extras
+        if (bundle != null)
+        {
+            val img: Int = bundle.getInt("thumbnail")
+            prodName.text = bundle.getString("title")
+            prodDesc.text = bundle.getString("description")
+            prodPrice.text = bundle.getString("price")
+            prodRating.text = bundle.getString("rating")
+            prodDisc.text = bundle.getString("discount")
+            prodImage.setImageResource(img)
+        }
+    }
+
+    override fun onBackPressed()    // On Back Button Press going to either Main Activity or Second Activity
+    {
+        super.onBackPressed()
+        intent = Intent(this, ProductViewActivity::class.java)
+        startActivity(intent)
     }
 }

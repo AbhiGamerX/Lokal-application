@@ -28,7 +28,7 @@
         <ImageView
             android:id="@+id/productImage"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="240dp"
             android:scaleType="centerCrop"
             tools:srcCompat="@tools:sample/avatars"/>
 
@@ -36,6 +36,7 @@
             android:id="@+id/productName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:paddingStart="5dp"
             style="@style/TextAppearance.AppCompat.Headline"
             android:maxLines="1"
             android:ems="10"
@@ -47,6 +48,7 @@
             style="@style/TextAppearance.AppCompat.Body1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:paddingStart="5dp"
             android:maxLines="4"
             android:layout_marginTop="10dp"
             android:text="@string/textview"/>
@@ -55,42 +57,40 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="10dp"
             android:orientation="horizontal">
 
             <!--TextView for displaying Price-->
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:paddingStart="5dp"
                 style="@style/TextAppearance.AppCompat.Body2"
                 android:layout_marginTop="10dp"
-                android:text="Price"/>
-
-            <!--Text View for displaying :-->
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                style="@style/TextAppearance.AppCompat.Body2"
-                android:layout_marginTop="10dp"
-                android:text=" : "
-                android:textStyle="bold"/>
+                android:text="Price : $"/>
 
             <TextView
                 android:id="@+id/productPrice"
                 style="@style/TextAppearance.AppCompat.Body2"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:text="@string/textview"/>
 
             <!--Text View for displaying " "-->
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 style="@style/TextAppearance.AppCompat.Body2"
                 android:layout_marginTop="10dp"
                 android:text="  "/>
 
+            <!--TextView for displaying Discount-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/TextAppearance.AppCompat.Body2"
+                android:layout_marginTop="10dp"
+                android:text="Discount : "/>
             <TextView
                 android:id="@+id/productDiscount"
                 style="@style/TextAppearance.AppCompat.Body2"
@@ -111,24 +111,24 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="10dp"
             android:orientation="horizontal">
 
-            <!--TextView for displaying Discount-->
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:paddingStart="5dp"
                 style="@style/TextAppearance.AppCompat.Body2"
                 android:layout_marginTop="10dp"
-                android:text="Discount : "/>
+                android:text="Rating : "/>
 
             <TextView
                 android:id="@+id/productRating"
                 style="@style/TextAppearance.AppCompat.Body2"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:text="@string/textview"/>
+
         </LinearLayout>
 
     </LinearLayout>

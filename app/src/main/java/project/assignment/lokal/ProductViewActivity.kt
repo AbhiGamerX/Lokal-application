@@ -39,19 +39,20 @@ class ProductViewActivity : AppCompatActivity()
     private fun getProduct() // Function to bind interface, adapter and object
     {
         val listOfProducts: Call<Products> = ProductsRetroFit.apiInterface.getProducts()
+        //val ItemAdapter = ItemAdapter(listOfProducts)
         listOfProducts.enqueue(object : Callback<Products>
         {
             override fun onResponse(call: Call<Products>, response: Response<Products>)
             {
-                val temp : Products? = response.body()
-                if (temp != null) // If API body not empty
+                val flag : Products? = response.body()
+                if (flag != null) // If API body not empty
                 {
                     //Toast.makeText(this@ProductViewActivity, R.string.apinonempty, Toast.LENGTH_SHORT).show()
-                    adapter = ProductsAdapter(this@ProductViewActivity, temp.products)
+                    adapter = ProductsAdapter(this@ProductViewActivity, flag.products)
                     val recyclerView = findViewById<View>(R.id.productList) as RecyclerView
                     recyclerView.adapter = adapter
                     recyclerView.layoutManager = LinearLayoutManager(this@ProductViewActivity)
-                    //recyclerView.addOnItemTouchListener()
+
                 }
                 else    // If API body empty
                 {
@@ -64,11 +65,12 @@ class ProductViewActivity : AppCompatActivity()
                 Toast.makeText(this@ProductViewActivity, t.localizedMessage, Toast.LENGTH_LONG).show()
                 Log.ERROR
             }
-
         })
     }
-    companion object
+
+    /*fun newActivity(v: View?)
     {
-        val NEXT_SCREEN = "Details Screen"
-    }
+        intent = Intent(this, ProductDetailsActivity::class.java)
+        startActivity(intent)
+    }*/
 }
